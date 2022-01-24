@@ -13,5 +13,5 @@ This source collects all of installed colorschemes.
 
 ```vim
 " Use colorscheme source.
-call ddu#start([{'name': 'colorscheme'}])
+call ddu#start({'sources': [{'name': 'colorscheme'}]})
 ```
