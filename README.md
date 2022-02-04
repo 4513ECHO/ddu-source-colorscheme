@@ -12,6 +12,12 @@ This source collects all of installed colorschemes.
 ## Configuration
 
 ```vim
+" Set kind default action.
+call ddu#custom#pathch_global({
+      \ 'kindOptions': {
+      \   'colorscheme': {
+      \     'defaultAction': 'set',
+      \ }}})
 " Use colorscheme source.
 call ddu#start({'sources': [{'name': 'colorscheme'}]})
 ```

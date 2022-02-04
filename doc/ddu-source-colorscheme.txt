@@ -31,6 +31,12 @@ https://github.com/vim-denops/denops.vim
 EXAMPLES				*ddu-source-colorscheme-examples*
 
 >
+	" Set kind default action.
+	call ddu#custom#pathch_global({
+	      \ 'kindOptions': {
+	      \   'colorscheme': {
+	      \     'defaultAction': 'set',
+	      \ }}})
 	" Use colorscheme source.
 	call ddu#start({'sources': [{'name': 'colorscheme'}]})
 <
