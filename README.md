@@ -13,7 +13,7 @@ This source collects all of installed colorschemes.
 
 ```vim
 " Set kind default action.
-call ddu#custom#pathch_global({
+call ddu#custom#patch_global({
       \ 'kindOptions': {
       \   'colorscheme': {
       \     'defaultAction': 'set',
