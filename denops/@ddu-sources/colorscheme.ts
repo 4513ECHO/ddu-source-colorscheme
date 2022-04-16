@@ -1,10 +1,10 @@
-import * as fn from "https://deno.land/x/denops_std@v3.0.0/function/mod.ts";
-import * as op from "https://deno.land/x/denops_std@v3.0.0/option/mod.ts";
-import type { GatherArguments } from "https://deno.land/x/ddu_vim@v0.12.2/base/source.ts";
-import type { Item } from "https://deno.land/x/ddu_vim@v0.12.2/types.ts";
-import { BaseSource } from "https://deno.land/x/ddu_vim@v0.12.2/types.ts";
-import { ensureArray } from "https://deno.land/x/unknownutil@v1.1.4/mod.ts";
-import { basename } from "https://deno.land/std@0.125.0/path/mod.ts";
+import * as fn from "https://deno.land/x/denops_std@v3.3.0/function/mod.ts";
+import * as op from "https://deno.land/x/denops_std@v3.3.0/option/mod.ts";
+import type { GatherArguments } from "https://deno.land/x/ddu_vim@v1.5.0/base/source.ts";
+import type { Item } from "https://deno.land/x/ddu_vim@v1.5.0/types.ts";
+import { BaseSource } from "https://deno.land/x/ddu_vim@v1.5.0/types.ts";
+import { ensureArray } from "https://deno.land/x/unknownutil@v2.0.0/mod.ts";
+import { basename } from "https://deno.land/std@0.135.0/path/mod.ts";
 import type { ActionData } from "../@ddu-kinds/colorscheme.ts";
 
 type Params = Record<never, never>;
@@ -26,9 +26,9 @@ export class Source extends BaseSource<Params, ActionData> {
         controller.enqueue(
           colorschemes.map((i) => {
             return {
-              word: basename(i).split(".")[0],
+              word: basename(i, ".vim"),
               action: {
-                name: basename(i).split(".")[0],
+                name: basename(i, ".vim"),
               },
             } as Item<ActionData>;
           }),

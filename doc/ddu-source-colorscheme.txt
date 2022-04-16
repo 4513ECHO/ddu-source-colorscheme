@@ -3,7 +3,7 @@
 Author: Hibiki <4513echo@gmail.com>
 License: MIT License
 URL: https://github.com/4513ECHO/ddu-source-colorscheme
-Last change: 2022 Jan 22
+Last change: 2022 Mar 26
 
 ==============================================================================
 CONTENTS				*ddu-source-colorscheme-contents*
@@ -12,6 +12,7 @@ Introduction				|ddu-source-colorscheme-introdution|
 Install					|ddu-source-colorscheme-install|
 Examples				|ddu-source-colorscheme-examples|
 Params					|ddu-source-colorscheme-params|
+Actions					|ddu-kind-colorscheme-actions|
 About					|ddu-source-colorscheme-about|
 
 ==============================================================================
@@ -32,11 +33,14 @@ EXAMPLES				*ddu-source-colorscheme-examples*
 
 >
 	" Set kind default action.
-	call ddu#custom#pathch_global({
+	call ddu#custom#patch_global({
 	      \ 'kindOptions': {
 	      \   'colorscheme': {
 	      \     'defaultAction': 'set',
-	      \ }}})
+	      \   },
+	      \ },
+	      \ })
+	
 	" Use colorscheme source.
 	call ddu#start({'sources': [{'name': 'colorscheme'}]})
 <
@@ -44,7 +48,11 @@ EXAMPLES				*ddu-source-colorscheme-examples*
 ==============================================================================
 PARAMS					*ddu-source-colorscheme-params*
 
-Undefined now
+==============================================================================
+ACTIONS					*ddu-kind-colorscheme-actions*
+
+set
+	Set the colorscheme.
 
 ==============================================================================
 ABOUT					*ddu-source-colorscheme-about*
