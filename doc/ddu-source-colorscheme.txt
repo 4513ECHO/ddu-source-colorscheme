@@ -64,7 +64,8 @@ toggleBackground
 ==============================================================================
 FREQUENTLY ASKED QUESTIONS (FAQ)		*ddu-source-colorscheme-faq*
 
-Q: I want to preview colorschemes automatically. (also known as "Unite Beautiful Attack")
+Q: I want to preview colorschemes automatically as moving cursor. (also known
+as "Unite Beautiful Attack")
 
 A: To do it, using with |ddu-ui-ff| is recommended.
 You have to set |ddu-action-option-quit| to |v:false| for "set" action and
