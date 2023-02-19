@@ -13,6 +13,7 @@ Install					|ddu-source-colorscheme-install|
 Examples				|ddu-source-colorscheme-examples|
 Params					|ddu-source-colorscheme-params|
 Actions					|ddu-kind-colorscheme-actions|
+FAQ					|ddu-source-colorscheme-faq|
 About					|ddu-source-colorscheme-about|
 
 ==============================================================================
@@ -59,6 +60,29 @@ set
 				*ddu-kind-colorscheme-action-toggleBackground*
 toggleBackground
 	Toggle 'background'. This action doesn't quit the ddu ui.
+
+==============================================================================
+FREQUENTLY ASKED QUESTIONS (FAQ)		*ddu-source-colorscheme-faq*
+
+Q: I want to preview colorschemes automatically. (also known as "Unite Beautiful Attack")
+
+A: To do it, using with |ddu-ui-ff| is recommended.
+You have to set |ddu-action-option-quit| to |v:false| for "set" action and
+use |ddu-ui-ff-param-autoAction|.
+
+>
+	call ddu#start({
+	      \ 'actionOptions': {
+	      \   'set': { 'quit': v:false },
+	      \ },
+	      \ 'name': 'UniteBeautifulAttack',
+	      \ 'sources': [{ 'name': 'colorscheme' }],
+	      \ 'uiParams': {
+	      \   'ff': {
+	      \     'autoAction': { 'name': 'itemAction' },
+	      \   },
+	      \ },
+	      \ })
 
 ==============================================================================
 ABOUT					*ddu-source-colorscheme-about*
