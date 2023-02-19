@@ -15,14 +15,12 @@ Please read [help](doc/ddu-source-colorscheme.txt) for details.
 
 ```vim
 " Set kind default action.
-call ddu#custom#patch_global({
-      \ 'kindOptions': {
-      \   'colorscheme': {
-      \     'defaultAction': 'set',
-      \   },
+call ddu#custom#patch_global('kindOptions', {
+      \ 'colorscheme': {
+      \   'defaultAction': 'set',
       \ },
       \ })
 
 " Use colorscheme source.
-call ddu#start({'sources': [{'name': 'colorscheme'}]})
+call ddu#start({ 'sources': [{ 'name': 'colorscheme' }] })
 ```

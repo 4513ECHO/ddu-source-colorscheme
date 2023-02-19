@@ -1,9 +1,9 @@
-*ddu-source-colorscheme.txt*			Colorscheme source for ddu.vim
+*ddu-source-colorscheme.txt*		Colorscheme source for ddu.vim
 
 Author: Hibiki <4513echo@gmail.com>
 License: MIT License
 URL: https://github.com/4513ECHO/ddu-source-colorscheme
-Last change: 2022 Mar 26
+Last change: 2023 Feb 19
 
 ==============================================================================
 CONTENTS				*ddu-source-colorscheme-contents*
@@ -33,26 +33,32 @@ EXAMPLES				*ddu-source-colorscheme-examples*
 
 >
 	" Set kind default action.
-	call ddu#custom#patch_global({
-	      \ 'kindOptions': {
-	      \   'colorscheme': {
-	      \     'defaultAction': 'set',
-	      \   },
+	call ddu#custom#patch_global('kindOptions', {
+	      \ 'colorscheme': {
+	      \   'defaultAction': 'set',
 	      \ },
 	      \ })
-	
+
 	" Use colorscheme source.
-	call ddu#start({'sources': [{'name': 'colorscheme'}]})
+	call ddu#start({ 'sources': [{ 'name': 'colorscheme' }] })
 <
 
 ==============================================================================
 PARAMS					*ddu-source-colorscheme-params*
 
+	UNDEFINED NOW
+
 ==============================================================================
 ACTIONS					*ddu-kind-colorscheme-actions*
 
+					*ddu-kind-colorscheme-action-set*
 set
-	Set the colorscheme.
+	Set the |color-schemes| with |:silent|.
+	If you select multiple items, last item are used.
+
+				*ddu-kind-colorscheme-action-toggleBackground*
+toggleBackground
+	Toggle 'background'. This action doesn't quit the ddu ui.
 
 ==============================================================================
 ABOUT					*ddu-source-colorscheme-about*
