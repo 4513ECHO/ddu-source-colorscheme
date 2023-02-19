@@ -55,11 +55,12 @@ ACTIONS					*ddu-kind-colorscheme-actions*
 					*ddu-kind-colorscheme-action-set*
 set
 	Set the |color-schemes| with |:silent|.
-	If you select multiple items, last item are used.
+	If you select multiple items, last item is used.
 
 				*ddu-kind-colorscheme-action-toggleBackground*
 toggleBackground
-	Toggle 'background'. This action doesn't quit the ddu ui.
+	Toggle 'background' between "dark" and "light".
+	This action doesn't quit the ddu ui.
 
 ==============================================================================
 FREQUENTLY ASKED QUESTIONS (FAQ)		*ddu-source-colorscheme-faq*
