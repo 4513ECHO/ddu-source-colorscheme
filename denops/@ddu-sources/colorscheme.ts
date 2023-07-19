@@ -1,7 +1,9 @@
-import type { OnInitArguments } from "https://deno.land/x/ddu_vim@v2.8.4/base/source.ts";
-import type { Item } from "https://deno.land/x/ddu_vim@v2.8.4/types.ts";
-import { BaseSource } from "https://deno.land/x/ddu_vim@v2.8.4/types.ts";
-import { ensureArray } from "https://deno.land/x/unknownutil@v2.1.1/mod.ts";
+import {
+  BaseSource,
+  type OnInitArguments,
+} from "https://deno.land/x/ddu_vim@v3.4.3/base/source.ts";
+import type { Item } from "https://deno.land/x/ddu_vim@v3.4.3/types.ts";
+import { ensure, is } from "https://deno.land/x/unknownutil@v3.2.0/mod.ts";
 import type { ActionData } from "../@ddu-kinds/colorscheme.ts";
 
 type Params = Record<never, never>;
@@ -12,7 +14,7 @@ export class Source extends BaseSource<Params, ActionData> {
 
   override async onInit(args: OnInitArguments<Params>): Promise<void> {
     const colorschemes = await args.denops.call("getcompletion", "", "color");
-    this.#items = ensureArray<string>(colorschemes)
+    this.#items = ensure(colorschemes, is.ArrayOf(is.String))
       .map((word) => ({
         word,
         action: { name: word },

@@ -1,13 +1,13 @@
-import { BaseKind } from "https://deno.land/x/ddu_vim@v2.8.4/base/kind.ts";
+import { BaseKind } from "https://deno.land/x/ddu_vim@v3.4.3/base/kind.ts";
 import {
   ActionFlags,
   type Actions,
-} from "https://deno.land/x/ddu_vim@v2.8.4/types.ts";
-import { background } from "https://deno.land/x/denops_std@v4.3.3/option/mod.ts";
+} from "https://deno.land/x/ddu_vim@v3.4.3/types.ts";
+import { background } from "https://deno.land/x/denops_std@v5.0.1/option/mod.ts";
 
-export interface ActionData {
+export type ActionData = {
   name: string;
-}
+};
 
 type Params = Record<never, never>;
 
