@@ -1,9 +1,9 @@
 import {
   BaseSource,
   type OnInitArguments,
-} from "https://deno.land/x/ddu_vim@v3.4.3/base/source.ts";
-import type { Item } from "https://deno.land/x/ddu_vim@v3.4.3/types.ts";
-import { ensure, is } from "https://deno.land/x/unknownutil@v3.2.0/mod.ts";
+} from "https://deno.land/x/ddu_vim@v3.7.0/base/source.ts";
+import type { Item } from "https://deno.land/x/ddu_vim@v3.7.0/types.ts";
+import { ensure, is } from "https://deno.land/x/unknownutil@v3.11.0/mod.ts";
 import type { ActionData } from "../@ddu-kinds/colorscheme.ts";
 
 type Params = Record<never, never>;

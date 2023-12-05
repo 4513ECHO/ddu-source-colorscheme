@@ -1,12 +1,12 @@
-*ddu-source-colorscheme.txt*		Colorscheme source for ddu.vim
+*ddu-source-colorscheme.txt*                    Colorscheme source for ddu.vim
 
 Author: Hibiki <mail@4513echo.dev>
 License: MIT License
 URL: https://github.com/4513ECHO/ddu-source-colorscheme
-Last change: 2023 May 16
+Last change: 2023 Dec 05
 
 ==============================================================================
-CONTENTS				*ddu-source-colorscheme-contents*
+CONTENTS                                     *ddu-source-colorscheme-contents*
 
 Introduction				|ddu-source-colorscheme-introdution|
 Install					|ddu-source-colorscheme-install|
@@ -17,12 +17,12 @@ FAQ					|ddu-source-colorscheme-faq|
 About					|ddu-source-colorscheme-about|
 
 ==============================================================================
-INTRODUCTION				*ddu-source-colorscheme-introdution*
+INTRODUCTION                              *ddu-source-colorscheme-introdution*
 
 This source collects all of installed colorschemes.
 
 ==============================================================================
-INSTALL					*ddu-source-colorscheme-install*
+INSTALL                                       *ddu-source-colorscheme-install*
 
 Please install both "|ddu|.vim" and "|denops.vim|".
 
@@ -30,7 +30,7 @@ https://github.com/Shougo/ddu.vim
 https://github.com/vim-denops/denops.vim
 
 ==============================================================================
-EXAMPLES				*ddu-source-colorscheme-examples*
+EXAMPLES                                     *ddu-source-colorscheme-examples*
 
 >
 	" Set kind default action.
@@ -45,19 +45,23 @@ EXAMPLES				*ddu-source-colorscheme-examples*
 <
 
 ==============================================================================
-PARAMS					*ddu-source-colorscheme-params*
+PARAMS                                         *ddu-source-colorscheme-params*
 
 	UNDEFINED NOW
 
 ==============================================================================
-ACTIONS					*ddu-kind-colorscheme-actions*
+ACTIONS                                         *ddu-kind-colorscheme-actions*
 
-					*ddu-kind-colorscheme-action-set*
+                                             *ddu-kind-colorscheme-action-set*
 set
-	Set the |color-schemes| with |:silent|.
+	Set the |color-schemes|.
 	If you select multiple items, last item is used.
 
-				*ddu-kind-colorscheme-action-toggleBackground*
+	params~
+	silent		|Boolean| (default: |v:true|)
+		Wether execute the command with |:silent|.
+
+                                *ddu-kind-colorscheme-action-toggleBackground*
 toggleBackground
 	Toggle 'background' between "dark" and "light".
 	This action doesn't quit the ddu ui.
@@ -87,7 +91,7 @@ use |ddu-ui-ff-param-autoAction|.
 	      \ })
 
 ==============================================================================
-ABOUT					*ddu-source-colorscheme-about*
+ABOUT                                           *ddu-source-colorscheme-about*
 
 |ddu-source-colorscheme| is developed by Hibiki(4513ECHO) and licensed under
 the MIT License. Visit the project page for the latest version:

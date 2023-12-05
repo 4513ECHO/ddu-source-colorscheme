@@ -1,9 +1,9 @@
-import { BaseKind } from "https://deno.land/x/ddu_vim@v3.4.3/base/kind.ts";
+import { BaseKind } from "https://deno.land/x/ddu_vim@v3.7.0/base/kind.ts";
 import {
   ActionFlags,
   type Actions,
-} from "https://deno.land/x/ddu_vim@v3.4.3/types.ts";
-import { background } from "https://deno.land/x/denops_std@v5.0.1/option/mod.ts";
+} from "https://deno.land/x/ddu_vim@v3.7.0/types.ts";
+import { background } from "https://deno.land/x/denops_std@v5.1.0/option/mod.ts";
 
 export type ActionData = {
   name: string;
@@ -15,7 +15,10 @@ export class Kind extends BaseKind<Params> {
   override actions: Actions<Params> = {
     async set(args) {
       const { name } = args.items.at(-1)?.action as ActionData;
-      await args.denops.cmd(`silent colorscheme ${name}`);
+      const { silent } = args.actionParams as { silent?: boolean };
+      await args.denops.cmd(
+        `${(silent ?? true) ? "silent" : ""} colorscheme ${name}`,
+      );
       return Promise.resolve(ActionFlags.None);
     },
     async toggleBackground(args) {
