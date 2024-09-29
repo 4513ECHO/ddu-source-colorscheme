@@ -1,15 +1,15 @@
-import { BaseKind } from "jsr:@shougo/ddu-vim@^6.0.0/kind";
-import { ActionFlags, type Actions } from "jsr:@shougo/ddu-vim@^6.0.0/types";
-import { background } from "jsr:@denops/std@^7.1.1/option";
+import { BaseKind } from "jsr:@shougo/ddu-vim@^6.2.0/kind";
+import { ActionFlags, type Actions } from "jsr:@shougo/ddu-vim@^6.2.0/types";
+import { background } from "jsr:@denops/std@^7.2.0/option";
 
 export type ActionData = {
   name: string;
 };
 
-type Params = Record<never, never>;
+type Params = Record<PropertyKey, never>;
 
 export class Kind extends BaseKind<Params> {
-  actions: Actions<Params> = {
+  override actions: Actions<Params> = {
     async set(args) {
       const { name } = args.items.at(-1)?.action as ActionData;
       const { silent } = args.actionParams as { silent?: boolean };
@@ -25,7 +25,7 @@ export class Kind extends BaseKind<Params> {
     },
   };
 
-  params(): Params {
+  override params(): Params {
     return {};
   }
 }
