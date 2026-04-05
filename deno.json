@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "erasableSyntaxOnly": true,
+    "noUncheckedIndexedAccess": true
+  },
+  "lock": false,
+  "tasks": {
+    "check": "deno fmt --check && deno lint && deno check"
+  },
+  "workspace": [
+    "./denops/@ddu-kinds/colorscheme",
+    "./denops/@ddu-sources/colorscheme"
+  ]
+}

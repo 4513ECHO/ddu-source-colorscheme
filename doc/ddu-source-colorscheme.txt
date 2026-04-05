@@ -3,7 +3,7 @@
 Author: Hibiki <mail@4513echo.dev>
 License: MIT License
 URL: https://github.com/4513ECHO/ddu-source-colorscheme
-Last change: 2023 Dec 05
+Last change: 2026 Apr 05
 
 ==============================================================================
 CONTENTS                                     *ddu-source-colorscheme-contents*
@@ -19,7 +19,7 @@ About					|ddu-source-colorscheme-about|
 ==============================================================================
 INTRODUCTION                              *ddu-source-colorscheme-introdution*
 
-This source collects all of installed colorschemes.
+This source collects all installed colorschemes.
 
 ==============================================================================
 INSTALL                                       *ddu-source-colorscheme-install*
@@ -32,7 +32,7 @@ https://github.com/vim-denops/denops.vim
 ==============================================================================
 EXAMPLES                                     *ddu-source-colorscheme-examples*
 
->
+>vim
 	" Set kind default action.
 	call ddu#custom#patch_global('kindOptions', {
 	      \ 'colorscheme': {
@@ -72,7 +72,7 @@ FREQUENTLY ASKED QUESTIONS (FAQ)		*ddu-source-colorscheme-faq*
 Q: I want to preview colorschemes automatically as moving cursor. (also known
 as "Unite Beautiful Attack")
 
-A: To do it, using with |ddu-ui-ff| is recommended.
+A: Following is an example with |ddu-ui-ff|.
 You have to set |ddu-action-option-quit| to |v:false| for "set" action and
 use |ddu-ui-ff-param-autoAction|.
 

@@ -1,9 +1,6 @@
-import {
-  BaseSource,
-  type OnInitArguments,
-} from "jsr:@shougo/ddu-vim@^6.2.0/source";
-import type { Item } from "jsr:@shougo/ddu-vim@^6.2.0/types";
-import type { ActionData } from "../@ddu-kinds/colorscheme.ts";
+import { BaseSource, type OnInitArguments } from "@shougo/ddu-vim/source";
+import type { Item } from "@shougo/ddu-vim/types";
+import type { ActionData } from "../../@ddu-kinds/colorscheme/main.ts";
 
 type Params = Record<PropertyKey, never>;
 
